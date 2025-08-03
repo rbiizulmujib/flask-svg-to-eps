@@ -68,7 +68,5 @@ def api_info():
         'scale_options': [f'{i}x' for i in range(1, 11)]
     })
 
-# Hanya dijalankan saat tidak di-deploy ke Vercel
-if __name__ == '__main__':
-    if not os.getenv('VERCEL'):
-        app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
+# if __name__ == '__main__':
+#     app.run()
